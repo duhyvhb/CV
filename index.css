@@ -1,0 +1,252 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  grid: auto auto / 1fr 900px 1fr;
+  margin: 0;
+  font: 14px/1.5 Arial;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  body {
+    grid: auto auto / 1fr 675px 1fr;
+  }
+}
+
+@media (max-width: 678px) {
+  body {
+    grid: auto auto / 1fr;
+  }
+}
+
+header {
+  grid-area: 1/1/2/4;
+  text-align: center;
+  padding: 30px 0;
+  background-color: #444;
+}
+
+@media (max-width: 678px) {
+  header {
+    grid-area: 1/1/2/2;
+  }
+}
+
+header > .avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header > h1 {
+  margin: 16px;
+  font-size: 16px;
+  color: #fff;
+}
+
+header > p {
+  margin: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+main {
+  grid-area: 2/2/3/3;
+  display: grid;
+  grid: auto / 300px 600px;
+  margin-bottom: 100px;
+}
+@media (max-width: 900px) {
+  main {
+    grid: auto / 1fr 2fr;
+  }
+}
+
+@media (max-width: 678px) {
+  main {
+    grid-area: 2/1/3/2;
+    grid: auto auto / 1fr;
+    margin: 0 20px 50px;
+  }
+}
+
+.left {
+  grid-area: 1/1/2/2;
+}
+
+@media (max-width: 678px) {
+  .left {
+    grid-area: 1/1/2/2;
+  }
+}
+
+.right {
+  grid-area: 1/2/2/3;
+  margin-left: 50px;
+}
+
+@media (max-width: 678px) {
+  .right {
+    grid-area: 2/1/3/2;
+    margin: 0;
+  }
+}
+
+main section {
+  display: grid;
+  grid: auto auto / 50px auto;
+  margin-top: 30px;
+  align-items: center;
+}
+
+
+main section i.icon-title {
+  grid-area: 1/1/2/2;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #77a8a3;
+  color: #fff;
+}
+
+main section > h2 {
+  grid-area: 1/2/2/3;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+}
+
+main section > h2::after {
+  content: "";
+  flex: 1;
+  display: inline-block;
+  margin-left: 10px;
+  width: 100%;
+  height: 4px;
+  background-color: #77a8a3;
+
+}
+
+.left .detail {
+  grid-area: 2/2/3/3;
+}
+
+.left .basic-info .detail {
+  margin: 0;
+  padding: 0;
+}
+
+.left .basic-info .detail li {
+  display: flex;
+  align-items: center;
+}
+
+.left .basic-info .detail .iconfont {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.left .skill .detail {
+  margin: 0;
+  padding: 0;
+}
+
+.left .skill .detail li {
+  margin-top: 10px;
+}
+
+.left .detail dd {
+  margin: 5px 0 10px 0;
+  height: 4px;
+  background-color: #ccc;
+}
+
+.left .detail dd span {
+  display: block;
+  height: 4px;
+  background-color: #77a8a3;
+}
+
+#JavaScript {
+  width: 70%;
+}
+
+#CSS3 {
+  width: 80%;
+}
+
+#NodeJS {
+  width: 50%;
+}
+
+.right .detail {
+  grid-area: 2/2/3/3;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 678px) {
+  .right .detail {
+    grid-area: 2/1/3/3;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.right .detail > li {
+  display: grid;
+  grid: auto auto / 150px 1fr auto;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 678px) {
+  .right .detail > li {
+    grid: auto auto auto / 150px 1fr auto;
+  }
+}
+
+.right .detail .time {
+  grid-area: 1/1/2/2;
+  margin-right: 10px;
+}
+
+.right .detail h3 {
+  grid-area: 1/2/2/3;
+}
+
+@media (max-width: 678px) {
+  .right .detail h3 {
+    grid-area: 2/1/3/4;
+    justify-self: center;
+  }
+}
+
+.right .detail .major, .right .detail .job-title {
+  grid-area: 1/3/2/4;
+}
+
+.right .detail p, .right .detail ul {
+  grid-area: 2/2/3/4;
+  list-style: disc;
+}
+
+@media (max-width: 678px) {
+  .right .detail p, .right .detail ul {
+    grid-area: 3/1/4/4;
+  }
+}
+
+
