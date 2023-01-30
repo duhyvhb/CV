@@ -190,6 +190,10 @@ main section > h2::after {
   width: 50%;
 }
 
+#VueJS {
+  width: 50%;
+}
+
 .right .detail {
   grid-area: 2/2/3/3;
   list-style: none;
